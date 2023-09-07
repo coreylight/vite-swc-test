@@ -5,6 +5,9 @@ import { lingui } from '@lingui/vite-plugin'
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/vite-swc-test',
+  build: {
+    target: 'esnext',
+  },
   plugins: [
     react({
       plugins: [
