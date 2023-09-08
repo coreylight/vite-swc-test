@@ -8,9 +8,9 @@ export default defineConfig({
   build: {
     target: 'esnext',
   },
-  // publicDir: '../public',
+  root: 'src',
+  publicDir: '../public',
   logLevel: 'info',
-  // root: 'src',
   plugins: [
     react({
       plugins: [
