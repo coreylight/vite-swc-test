@@ -1,9 +1,12 @@
-import { useState } from 'test-react'
+import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Trans } from '@lingui/macro'
 import { extra } from './extra'
+import { level1 } from './level1'
+
+void level1
 
 function App() {
   const [count, setCount] = useState(0)

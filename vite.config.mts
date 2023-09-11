@@ -16,16 +16,16 @@ export default defineConfig({
   plugins: [
     react({
       plugins: [
-        [
-          '@swc/plugin-transform-imports',
-          {
-            'test-react': {
-              transform: 'react',
-              preventFullImport: true,
-              skipDefaultConversion: true,
-            },
-          },
-        ],
+        // [
+        //   '@swc/plugin-transform-imports',
+        //   {
+        //     'react': {
+        //       transform: 'react',
+        //       preventFullImport: true,
+        //       skipDefaultConversion: true,
+        //     },
+        //   },
+        // ],
         ['@lingui/swc-plugin', {}],
       ],
     }),
