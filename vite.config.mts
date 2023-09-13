@@ -58,4 +58,18 @@ export default defineConfig({
     vanillaExtractPlugin() as any,
     istanbul(),
   ],
+  define: {
+    'process.env': {
+      EMOTION_ENABLE_LABELS: JSON.parse(
+        process.env.EMOTION_ENABLE_LABELS || 'false'
+      ),
+      EMOTION_WARN_UNSAFE_SELECTOR: JSON.parse(
+        process.env.EMOTION_WARN_UNSAFE_SELECTOR || 'false'
+      ),
+      NODE_ENV:
+        typeof process.env.NODE_ENV === 'string'
+          ? process.env.NODE_ENV
+          : 'production',
+    },
+  },
 })
