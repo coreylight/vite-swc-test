@@ -15,6 +15,7 @@ export default defineConfig({
   logLevel: 'info',
   plugins: [
     react({
+      jsxImportSource: '@emotion/react',
       plugins: [
         // [
         //   '@swc/plugin-transform-imports',
