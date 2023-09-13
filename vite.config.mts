@@ -20,6 +20,7 @@ export default defineConfig({
   base: '/vite-swc-test',
   build: {
     outDir: '../dist',
+    sourcemap: !process.env.NO_SOURCEMAPS,
     target: 'esnext',
   },
   root: 'src',
