@@ -13,9 +13,9 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/App.tsx:28
-msgid "count is {count}"
-msgstr "translated! count is {count}"
+#: src/app/index.tsx:8
+msgid "hi"
+msgstr "hola"
 
 #: src/level1/level2/level3/index.tsx:5
 msgid "level3"
