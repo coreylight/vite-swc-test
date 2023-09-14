@@ -29,12 +29,6 @@ export default defineConfig({
   root: 'src',
   publicDir: '../public',
   logLevel: 'info',
-  resolve: {
-    alias: {
-      'react-mapbox-gl': 'react-mapbox-gl/lib',
-      '@env': toPath('src/utils/env/vite'),
-    },
-  },
   plugins: [
     ViteTransformedListPlugin(),
     react({
@@ -58,6 +52,19 @@ export default defineConfig({
     vanillaExtractPlugin() as any,
     istanbul(),
   ],
+  resolve: {
+    alias: {
+      'react-mapbox-gl': 'react-mapbox-gl/lib',
+      '@env': toPath('src/utils/env/vite'),
+    },
+  },
+  server: {
+    port: 3000,
+    host: '127.0.0.1',
+    watch: {
+      ignored: [/coverage-cy/, /coverage-jest/, /cypress/],
+    },
+  },
   define: {
     'process.env': {
       EMOTION_ENABLE_LABELS: JSON.parse(
