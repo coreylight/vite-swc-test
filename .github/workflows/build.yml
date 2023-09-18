@@ -36,6 +36,9 @@ jobs:
       - name: List Deps
         run: yarn list @swc/core && yarn list esbuild && yarn list vite && yarn list rollup
 
+      - name: Run Checkout
+        run: node util/check.mjs
+
       - name: Build
         run: yarn build
 

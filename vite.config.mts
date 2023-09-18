@@ -33,19 +33,7 @@ export default defineConfig({
     ViteTransformedListPlugin(),
     react({
       jsxImportSource: '@emotion/react',
-      plugins: [
-        // [
-        //   '@swc/plugin-transform-imports',
-        //   {
-        //     'react': {
-        //       transform: 'react',
-        //       preventFullImport: true,
-        //       skipDefaultConversion: true,
-        //     },
-        //   },
-        // ],
-        ['@lingui/swc-plugin', {}],
-      ],
+      plugins: [['@lingui/swc-plugin', {}]],
     }),
     lingui(),
     tsconfigPaths(),
