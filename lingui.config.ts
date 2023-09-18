@@ -1,3 +1,4 @@
+/* eslint-disable import/no-default-export */
 import type { LinguiConfig } from '@lingui/conf'
 
 const config: LinguiConfig = {
@@ -6,8 +7,13 @@ const config: LinguiConfig = {
     {
       path: '<rootDir>/src/locales/{locale}',
       include: ['src'],
+      exclude: ['**/node_modules/**', 'src/generated'],
     },
   ],
+  fallbackLocales: {
+    default: 'en',
+  },
 }
 
+// ts-unused-exports:disable-next-line
 export default config
